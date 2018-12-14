@@ -13,4 +13,14 @@ namespace FooAPI.Models
         [JsonProperty("password")]
         public string Password { get; set; }
     }
+
+    public class PaginationDTO<T>
+    {
+        [JsonProperty("data")]
+        public List<T> Data { get; set; }
+        [JsonProperty("filterCount")]
+        public int FilterCount { get; set; }
+        [JsonProperty("totalCount")]
+        public int TotalCount { get; set; }
+    }
 }
